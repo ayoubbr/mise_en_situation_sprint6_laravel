@@ -1,0 +1,20 @@
+2 entites: team, player
+		
+	team has many players
+	player belongs to team
+
+team: { "name", "city", "country",  "date_founded"}
+
+player : fname, lname, age, height, foot_preferred
+
+1 seeder for both
+2 create model avec relations
+3 routes : afficher : team with id, all teams, 
+                        player with id, players, 
+                        players of a team, team of a player
+            edit: team , player
+            update: team ..
+            delete: team ..
+            create: team ..
+
+        

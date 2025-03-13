@@ -19,6 +19,12 @@
         <input type="number" name="age">
         <input type="text" name="height">
         <input type="text" name="foot">
+        <select name="team_id" id="">
+            <option value="">choose team</option>
+            @foreach ($teams as $team)
+                <option value="{{ $team->id }}">{{ $team->name }}</option>
+            @endforeach
+        </select>
         <button type="submit">submit</button>
 
     </form>

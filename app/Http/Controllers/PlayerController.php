@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Player;
+use App\Models\Team;
 use Illuminate\Http\Request;
 
 class PlayerController extends Controller
@@ -15,7 +16,8 @@ class PlayerController extends Controller
 
     public function create()
     {
-        return view('players.create');
+        $teams = Team::all();
+        return view('players.create', compact('teams'));
     }
 
 
@@ -44,8 +46,8 @@ class PlayerController extends Controller
     public function edit($playerId)
     {
         $player = Player::find($playerId);
-
-        return view('players.edit', compact('player'));
+        $teams = Team::all();
+        return view('players.edit', compact('player', 'teams'));
     }
 
 
